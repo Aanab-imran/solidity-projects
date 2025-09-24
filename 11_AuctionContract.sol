@@ -2,12 +2,12 @@
 pragma solidity ^0.8.0;
 
 contract BasicAuction {
-    address public highestBidder;   // Sabse zyada bid dene wale ka address
-    uint256 public highestBid;      // Sabse zyada bid ki amount
+    address public highestBidder;   
+    uint256 public highestBid;     
 
     function bid() public payable {
-        require(msg.value > highestBid, "Bid too low"); // New bid purani se badi honi chahiye
-        highestBidder = msg.sender;   // Naya bidder save karo
-        highestBid = msg.value;       // Nayi amount save karo
+        require(msg.value > highestBid, "Bid too low"); 
+        highestBidder = msg.sender;  
+        highestBid = msg.value;   
     }
 }
